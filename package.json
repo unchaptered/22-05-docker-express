@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "docker test project, from 2022-05-01",
   "author": "unchaptered",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "license": "ISC",
   "dependencies": {
