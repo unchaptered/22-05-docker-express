@@ -1,0 +1,11 @@
+# YAML : ain't markup language
+# docker-compose 는 버전을 명시해야 함
+
+version: '3'
+services:
+  redis-server:
+    image: 'redis'
+  node-app:
+    build: .
+    ports:
+      - "49160:8000"

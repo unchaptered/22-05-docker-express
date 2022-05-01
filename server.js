@@ -11,7 +11,7 @@ const redis = require('redis');
  */
 const client = redis.createClient({
     host: 'redis-server',
-    port: 6679
+    port: 6379
 });
 
 const PORT = 8000;
@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
     /**
      * 현재 숫자를 가져온 후에 1씩 올려줍니다.
      */
-    client('number', (err, number) => {
+    client.get('number', (err, number) => {
         client.set('number', +number + 1);
 
         res.send(`숫자가 1씩 올라갑니다. 숫자 : ${number}`);
